@@ -1,0 +1,46 @@
+# =============================================================================
+# Poseidon Wave-Layer PDE Finetuning Tutorial — Dependencies
+# =============================================================================
+# Install order:
+#   1. Create virtual environment:
+#        python -m venv poseidon_env
+#   2. Activate (Windows):  poseidon_env\Scripts\activate
+#      Activate (Linux/Mac): source poseidon_env/bin/activate
+#   3. Install PyTorch (choose the CUDA/CPU version for your platform):
+#        pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
+#   4. Install remaining packages:
+#        pip install -r requirements.txt
+#   5. Install scOT as editable package (from this repo root):
+#        pip install -e .
+# =============================================================================
+
+# --- Core ML framework (install separately with correct CUDA/CPU index URL) ---
+# torch==2.5.1            # see https://pytorch.org/get-started/locally/
+# torchvision==0.20.1
+
+# --- Poseidon / scOT dependencies ---
+transformers==4.29.2
+accelerate==0.31.0
+huggingface_hub==0.36.2
+safetensors==0.8.0
+
+# --- Data I/O ---
+h5py==3.16.0
+netCDF4==1.7.4
+numpy==2.2.6
+pandas==2.3.3
+
+# --- Visualization ---
+matplotlib==3.10.9
+pillow==12.3.0
+
+# --- Networking (SSL proxy workaround) ---
+requests==2.34.2
+urllib3==2.8.0
+certifi==2026.7.22
+
+# --- Config ---
+pyyaml==6.0.3
+
+# --- Optional: W&B (NOT required by the tutorial script, but listed by scOT) ---
+# wandb==0.14.2
